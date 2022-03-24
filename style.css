@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
+* {
+	-webkit-transition-property: all;
+	-webkit-transition-duration: .2s;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+	-moz-transition-property: all;
+  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
+  box-sizing: border-box;
+}
 body{
   background-color: #6096BA;
   font-family: 'Oswald', sans-serif;
@@ -8,17 +16,14 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
-
 h3 {
   color: #274C77;
 }
-
 .text-block {
   text-align: center;
   padding: 20px;
   
 }
-
 .profile-pic {
   text-align: center;
   padding-top: 10px;
@@ -30,23 +35,14 @@ h3 {
   font-family: 'Oswald', sans-serif;
   color: #E7ECEF;
 }
-* {
-	-webkit-transition-property: all;
-	-webkit-transition-duration: .2s;
-  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
-	-moz-transition-property: all;
-  -moz-transition-timing-function: cubic-bezier(100,50,21,6);
-  box-sizing: border-box;
-}
-
 .flex-container {
   display: inline-grid;
   grid-template-columns: 1fr 2fr;
 }
-
 .img-con {
   padding-top: 15px;
   padding-left: 50px;
+  padding-right: 5px;
   width: 100%;
   height: auto;
 }
@@ -54,7 +50,6 @@ h3 {
   padding-top: 15px;
   width: 100%;
 }
-
 .btn{
   color:#E7ECEF;
   background:rgba(0, 0, 0, 0.5);
@@ -64,7 +59,6 @@ h3 {
   letter-spacing:2px;
   text-transform:uppercase;
 }
-
 .btn:hover{
   border:none;
   background:rgba(0, 0, 0, 0.4);
@@ -72,23 +66,43 @@ h3 {
   padding:20px 20px;
   color: #1b1b1b;
 }
-
 .kunskap-con {
-  padding: 50px;
-  text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
-.skill-container {
-  width: 75%; 
-  background-color: #ddd; 
-  text-align: center;
- 
+.bar {
+  background: #8B8C89;
+  width: 0;
+  margin: .25em 0;
+  color: #fff;
+  position: relative;
+  transition: width 2s, background .2s;
+  -webkit-transform: translate3d(0, 0, 0);
+  clear: both;
 }
-.skills {
-  text-align: right; 
-  padding-top: 10px; 
-  padding-bottom: 10px; 
-  color: white; 
-  padding-left: 100px;
+.bar:nth-of-type(odd) {
+  background: #8c8c89;
+}
+.bar .label {
+  font-size: .75em;
+  padding: 1em;
+  background: #212121;
+  width: 7em;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+}
+.bar .label.second {
+  background: #333;
+}
+.count {
+  position: absolute;
+  right: .25em;
+  top: .75em;
+  padding: .15em;
+  font-size: .75em;
+  font-weight: bold;
 }
 .html {width: 70%; background-color: #04AA6D;} 
 .css {width: 70%; background-color: #2196F3;} 
